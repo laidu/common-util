@@ -33,55 +33,63 @@ public final class RegexUtil {
 
     /**
      * get regex match string list
-     *
      * @param regex  regex string
      * @param source source string
      * @param index  match () index
      * @return match result list
      */
     public List<String> getMacthAllResult(String regex, String source, int index) {
+        return getMacthAllResult(Pattern.compile(regex),source,index);
+    }
+
+    /**
+     * Use precompiled to improve efficiency
+     * @param pattern
+     * @param source
+     * @param index
+     * @return
+     */
+    public List<String> getMacthAllResult(Pattern pattern, String source, int index) {
 
         List<String> result = new ArrayList<>();
-
-        Pattern pattern = Pattern.compile(regex);
-
         Matcher matcher = pattern.matcher(source);
-
         while (matcher.find()) {
             result.add(matcher.group(index));
         }
-
         return result;
     }
 
     public List<String> getMacthAllResult(String regex, String source) {
-
         return getMacthAllResult(regex, source, 0);
     }
 
-    public String getMacthResult(String regex, String source) {
-
-        return getMacthResult(regex, source, 0);
+    public List<String> getMacthAllResult(Pattern pattern, String source) {
+        return getMacthAllResult(pattern, source, 0);
     }
 
     public String getMacthResult(String regex, String source, int index) {
-
         return getMacthResult(regex,source,index,null);
     }
 
+    public String getMacthResult(Pattern pattern, String source, int index) {
+        return getMacthResult(pattern,source,index,null);
+    }
+
+    public String getMacthResult(String regex, String source) {
+        return getMacthResult(regex, source, 0);
+    }
+
+    public String getMacthResult(Pattern pattern, String source) {
+        return getMacthResult(pattern, source, 0);
+    }
+
     public String getMacthResult(String regex, String source, int index, String defaultValue) {
-
-        String result = defaultValue;
-
-        Pattern pattern = Pattern.compile(regex);
-
-        Matcher matcher = pattern.matcher(source);
-
-        if ( matcher.find() ) {
-            result = matcher.group(index);
-        }
-
-        return result;
+        List<String> result = getMacthAllResult(regex,source,index);
+        return result.isEmpty()? defaultValue:result.get(index);
+    }
+    public String getMacthResult(Pattern pattern, String source, int index, String defaultValue) {
+        List<String> result = getMacthAllResult(pattern,source,index);
+        return result.isEmpty()? defaultValue:result.get(index);
     }
 }
 
