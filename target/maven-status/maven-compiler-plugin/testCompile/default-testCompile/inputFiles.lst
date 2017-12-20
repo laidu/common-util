@@ -1,9 +1,0 @@
-/Users/tczang/IdeaProjects/java-learn/production-component/common-util/src/test/java/org/laidu/commom/util/regex/RegexUtilTest.java
-/Users/tczang/IdeaProjects/java-learn/production-component/common-util/src/test/java/org/laidu/commom/util/encryption/DESEncryptionUtilTest.java
-/Users/tczang/IdeaProjects/java-learn/production-component/common-util/src/test/java/org/laidu/commom/util/http/curl/CurlParserUtilTest.java
-/Users/tczang/IdeaProjects/java-learn/production-component/common-util/src/test/java/org/laidu/commom/util/text/diff/TextDiff.java
-/Users/tczang/IdeaProjects/java-learn/production-component/common-util/src/test/java/org/laidu/commom/util/xml/JAXBUtilTest.java
-/Users/tczang/IdeaProjects/java-learn/production-component/common-util/src/test/java/org/laidu/commom/util/encryption/RSAencryptionUtilTest.java
-/Users/tczang/IdeaProjects/java-learn/production-component/common-util/src/test/java/org/laidu/commom/util/encryption/MD5UtilTest.java
-/Users/tczang/IdeaProjects/java-learn/production-component/common-util/src/test/java/org/laidu/commom/util/encryption/AESEncryptionUtilTest.java
-/Users/tczang/IdeaProjects/java-learn/production-component/common-util/src/test/java/org/laidu/commom/util/encryption/DESedeEncryptionUtilTest.java
